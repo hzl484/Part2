@@ -7,6 +7,10 @@
     <result column="password" property="password" jdbcType="VARCHAR" />
     <result column="name" property="name" jdbcType="VARCHAR" />
   </resultMap>
+  <!--<resultMap id="CustomerMap" type="cn.gezhi.po.Customer">-->
+    <!--<id property="id" column="id"/>-->
+    <!--<result property="name" column="name"/>-->
+  <!--</resultMap>-->
   <sql id="Example_Where_Clause" >
     <where >
       <foreach collection="oredCriteria" item="criteria" separator="or" >

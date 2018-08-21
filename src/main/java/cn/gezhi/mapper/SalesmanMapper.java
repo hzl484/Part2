@@ -1,5 +1,6 @@
 package cn.gezhi.mapper;
 
+import cn.gezhi.po.Customer;
 import cn.gezhi.po.Salesman;
 import cn.gezhi.po.SalesmanExample;
 import java.util.List;
@@ -15,6 +16,8 @@ public interface SalesmanMapper {
     int insert(Salesman record);
 
     int insertSelective(Salesman record);
+
+    List<Customer> selectBySalesman(Integer id);
 
     List<Salesman> selectByExample(SalesmanExample example);
 

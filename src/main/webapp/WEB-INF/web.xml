@@ -4,7 +4,7 @@
   <!--定义配置路径，通过ContextLoaderListener加载-->
   <!--加载顺序 context-param -> listener -> filter -> servlet-->
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
 
   <context-param>
