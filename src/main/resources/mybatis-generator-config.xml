@@ -46,11 +46,11 @@
         </javaClientGenerator>
         <!-- 指定数据库表 -->
         <table schema="" tableName="customer"></table>
-        <table schema="" tableName="salesman"></table>
-        <table schema="" tableName="auditor"></table>
-        <table schema="" tableName="bank"></table>
-        <table schema="" tableName="car"></table>
-        <table schema="" tableName="house"></table>
+        <!--<table schema="" tableName="salesman"></table>-->
+        <!--<table schema="" tableName="auditor"></table>-->
+        <!--<table schema="" tableName="bank"></table>-->
+        <!--<table schema="" tableName="car"></table>-->
+        <!--<table schema="" tableName="house"></table>-->
         <!-- 有些表的字段需要指定java类型
        <table schema="" tableName="">
          <columnOverride column="" javaType="" />
