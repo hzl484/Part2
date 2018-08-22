@@ -22,6 +22,15 @@
     <result column="auditorId" jdbcType="INTEGER" property="auditorid" />
     <result column="bankId" jdbcType="INTEGER" property="bankid" />
   </resultMap>
+
+  <select id="selectCustomerByUsername" parameterType="String" resultType="Customer">
+      select * from Customer where username = #{username}
+  </select>
+
+  <select id="selectCustomer" parameterType="String" resultType="Customer">
+      select * from Customer where username = #{username} and password = #{password}
+  </select>
+
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -85,7 +94,7 @@
     status, commission, focusLevel, note, socialSecurity, date, salesmanId, auditorId, 
     bankId
   </sql>
-  <select id="selectByExample" parameterType="cn.gezhi.po.CustomerExample" resultMap="BaseResultMap">
+  <select id="selectByExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct

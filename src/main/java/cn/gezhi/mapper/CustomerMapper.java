@@ -6,6 +6,10 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface CustomerMapper {
+    Customer selectCustomerByUsername(String username);
+
+    Customer selectCustomer(String username,String password);
+
     int countByExample(CustomerExample example);
 
     int deleteByExample(CustomerExample example);
@@ -16,7 +20,7 @@ public interface CustomerMapper {
 
     int insertSelective(Customer record);
 
-    List<Customer> selectByExample(CustomerExample example);
+    List<Customer> selectByExample();
 
     Customer selectByPrimaryKey(Integer id);
 
