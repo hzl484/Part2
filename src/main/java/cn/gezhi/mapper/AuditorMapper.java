@@ -3,6 +3,8 @@ package cn.gezhi.mapper;
 import cn.gezhi.po.Auditor;
 import cn.gezhi.po.AuditorExample;
 import java.util.List;
+
+import cn.gezhi.po.Customer;
 import org.apache.ibatis.annotations.Param;
 
 public interface AuditorMapper {
@@ -16,7 +18,11 @@ public interface AuditorMapper {
 
     int insertSelective(Auditor record);
 
+    List<Customer> selectByAuditor(Integer id);
+
     List<Auditor> selectByExample(AuditorExample example);
+
+    Auditor selectByUsername(String username);
 
     Auditor selectByPrimaryKey(Integer id);
 
