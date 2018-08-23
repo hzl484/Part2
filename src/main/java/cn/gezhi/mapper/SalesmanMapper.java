@@ -21,6 +21,8 @@ public interface SalesmanMapper {
 
     List<Salesman> selectByExample(SalesmanExample example);
 
+    Salesman selectByUsername(String username);
+
     Salesman selectByPrimaryKey(Integer id);
 
     int updateByExampleSelective(@Param("record") Salesman record, @Param("example") SalesmanExample example);
