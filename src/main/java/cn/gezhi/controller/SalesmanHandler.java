@@ -37,20 +37,20 @@ public class SalesmanHandler {
         Salesman salesman = service.salesManLogin(username);
         if (salesman == null){
             model.addAttribute("msg","用户不存在");
-            return "login";
+            return "salesmanLogin";
         }else {
             if (username.equals(salesman.getUsername()) && password.equals(salesman.getPassword())){
                 model.addAttribute("salesman",salesman);
-                return "main";
+                return "/showCustomer";
             }else {
                 model.addAttribute("msg","用户名或密码错误");
-                return "login";
+                return "salesmanLogin";
             }
         }
 
     }
     //      显示客户列表
-    @RequestMapping("showCustomer")
+    @RequestMapping("/showCustomer")
     public String showCustomer(int id, Model model){
         int pageNum = 1;
         if(request.getParameter("pageNum")==null || "".equals(request.getParameter("pageNum")) || "0".equals( request.getParameter("pageNum"))){
@@ -60,7 +60,11 @@ public class SalesmanHandler {
         }
         PageInfo<Customer> pageInfo = service.showCustomer(id,pageNum,PAGESIZE);
         model.addAttribute("pageInfo",pageInfo);
-        return "";
+        return "showCustomerBySalesman";
     }
+    //跳转添加客户数据
+    @RequestMapping("/addCustomer")
+    public String add(){ return "addCustomerBySalesman"; }
 
+    //添加客户数据
 }
