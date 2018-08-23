@@ -46,7 +46,7 @@
 <div class="loginbody">
 
     <span class="systemlogo"></span>
-    <form action="/loginView" method="post" name="userForm" onsubmit="return checkForm()">
+    <form action="/Customer/loginView" method="post" name="userForm" onsubmit="return checkForm()">
     <div class="loginbox">
         <ul>
             <li><input name="username" type="text" class="loginuser" onblur="checkUsername(this.value)"
@@ -57,7 +57,7 @@
                 <span id="PasswordErrorMsg" style="color: red;font-size: 15px"></span></li>
             <%--<li><input name="" type="submit" class="loginbtn" value="登录"  onclick="javascript:window.location=''"  />--%>
             <li><input name="" type="submit" class="loginbtn" value="登录"  onclick="checkAll()"  />
-                <label><input name="" type="checkbox" value="" checked="checked" />用户注册</label><label><a href="#">忘记密码？</a></label></li>
+                <label><input name="" type="checkbox" value="" checked="checked" />忘记密码？</label><label><a href="/registerPage">用户注册</a></label></li>
         </ul>
     </div>
     </form>
