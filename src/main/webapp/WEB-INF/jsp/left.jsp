@@ -49,7 +49,7 @@
         <ul class="menuson">
 
             <li><cite></cite><a href="/Customer/getHalfCustomer" target="rightFrame">客户列表</a><i></i></li>
-            <li><cite></cite><a href="/addCustomer" target="rightFrame">新增客户</a><i></i></li>
+            <li><cite></cite><a href="/add_customer" target="rightFrame">新增客户</a><i></i></li>
             <li><cite></cite><a href="/modify" target="rightFrame">用户操作</a><i></i></li>
 
         </ul>

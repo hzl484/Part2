@@ -18,14 +18,14 @@
     <div class="tiptop"><span>提示信息</span><a></a></div>
 
     <div class="tipinfo">
-        <span><img src="images/ticon.png" /></span>
+        <span><img src="../../images/ticon.png" /></span>
         <div class="tipright">
             <p>${information}</p>
             <cite>请选择！！！</cite>
         </div>
     </div>
     <div class="tipbtn">
-        <input name="" type="button"  class="sure" value="确定" onclick="dele()" />&nbsp;
+        <input name="" type="button"  class="sure" value="确定" onclick="sur()" />&nbsp;
         <input name="" type="button"  class="cance" value="取消" />
     </div>
 
@@ -33,7 +33,7 @@
 </div>
 </html>
 <script>
-    function dele() {
-        document.location="/modify";
+    function sur() {
+        document.location="/Customer/getHalfCustomer";
     }
 </script>
